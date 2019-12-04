@@ -1,0 +1,7 @@
+<launch>
+  <group name="wg">
+    <include file="$(find husky_gazebo)/launch/husky_playpen.launch" />
+    <include file="/home/tecchio/code/catkin_tutorials_ws/src/husky_clearpath/launch/teleop_for_husky.launch" />
+
+   </group>
+</launch>
