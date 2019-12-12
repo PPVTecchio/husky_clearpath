@@ -1,3 +1,7 @@
+<!-- Almost no launches from husky robot. -->
+
+<!-- AMCL doesn't seem to work well with husky spawing anywhere else than the origin. Tried to understand why, but I did not find the correct answer so far. -->
+
 <launch>
 
   <!-- husky_gazebo husky_playpen.launch -->
@@ -6,10 +10,10 @@
     <group>
       <arg name="robot_namespace" default="/"/>
 
-      <arg name="x" default="0.0"/>
-      <arg name="y" default="0.0"/>
+      <arg name="x" default="3.0"/>
+      <arg name="y" default="3.0"/>
       <arg name="z" default="0.0"/>
-      <arg name="yaw" default="0.0"/>
+      <arg name="yaw" default="25.0"/>
 
       <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED true)"/>
       <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
@@ -101,7 +105,7 @@
 
     <!--- Run Move Base -->
     <!-- husky_navigation move_base.launch -->
-    <group
+    <group>
       <arg name="no_static_map" default="false"/>
 
       <arg name="base_global_planner" default="navfn/NavfnROS"/>
